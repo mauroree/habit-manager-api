@@ -9,9 +9,9 @@ const MONGODB_URI = process.env.MONGODB_URI;
 
 // Configuração do CORS
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://habit-manager-pdkzrn56j-maurorees-projects.vercel.app/'],
+  origin: ['http://localhost:3000', 'https://habit-manager-app.vercel.app'], // Substitua pelo domínio do seu front-end
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true 
+  credentials: true // Se precisar enviar cookies ou autenticação de sessão
 }));
 
 app.use(express.json());
@@ -42,5 +42,5 @@ app.use((err, req, res, next) => {
 });
 
 app.use((req, res) => {
-  res.status(404).json({ error: 'Rota não encontrada' });
+  res.status(200).json({ error: 'Bem vindo' });
 });
