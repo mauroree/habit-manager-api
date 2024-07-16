@@ -9,7 +9,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 
 // Configuração do CORS
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://habit-manager-app.vercel.app'],
+  origin: ['http://localhost:3000', 'https://habit-manager-pdkzrn56j-maurorees-projects.vercel.app/'],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true 
 }));
